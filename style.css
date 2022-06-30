@@ -1,0 +1,107 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --main-bg: hsl(217, 54%, 11%);
+    --card-bg: hsl(216, 50%, 16%);
+    --line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body {
+    background-color: var(--main-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    font-family: 'Outfit', sans-serif;
+}
+
+.card {
+    background-color: var(--card-bg);
+    padding-inline: 1.5rem;
+    border-radius: 1rem;
+    width: 400px;
+}
+
+.image {
+    margin-top: 1.5rem;
+    background-image: url(./images/image-equilibrium.jpg);
+    height: 350px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+
+}
+
+h1 {
+    color: var(--White);
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+}
+
+p:nth-of-type(1) {
+    color: var(--Soft-blue);
+}
+
+p:nth-of-type(2) {
+    display: flex;
+    justify-content: space-between;
+}
+
+.price {
+    color: var(--Cyan);
+    font-weight: 600;
+
+}
+
+.timer {
+    color: var(--Soft-blue);
+    font-weight: 400;
+}
+
+.line::before {
+    content: "";
+    display: block;
+    border-top: 1px solid var(--line);
+    margin-bottom: 1rem;
+}
+
+.creator {
+    display: flex;
+}
+
+
+.creator>p {
+    margin: 5px 0 25px 10px
+}
+
+.creator img {
+    height: 30px;
+    justify-self: center;
+
+}
+
+@media only screen and (max-width:400px) {
+    .card {
+        width: 320px;
+        margin-top: 1rem;
+    }
+
+    .image {
+        background-size: contain;
+        margin-bottom: 0rem;
+    }
+}
